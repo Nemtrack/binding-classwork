@@ -5,8 +5,14 @@ import { CommonModule } from '@angular/common';
   selector: 'app-second',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './second.component.html',
-  styleUrl: './second.component.css',
+  template: '<p>{{ second }}</p>',
+  styles: [
+    `
+      p {
+        color: blue;
+      }
+    `,
+  ],
 })
 export class SecondComponent {
   @Input() second = '';

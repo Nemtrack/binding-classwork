@@ -5,8 +5,14 @@ import { CommonModule } from '@angular/common';
   selector: 'app-first',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './first.component.html',
-  styleUrl: './first.component.css',
+  template: '<p>{{ first }}</p> ',
+  styles: [
+    `
+      p {
+        color: red;
+      }
+    `,
+  ],
 })
 export class FirstComponent {
   @Input() first = '';
