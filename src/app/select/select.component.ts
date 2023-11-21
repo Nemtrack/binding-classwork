@@ -6,19 +6,18 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-select',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './select.component.html'
+  templateUrl: './select.component.html',
 })
 export class SelectComponent {
-
   @Output() emitEvent: EventEmitter<string> = new EventEmitter<string>();
   input: string = '';
 
-  onAddFirst(){
-    if(this.input == '') return;
+  onAddFirst() {
+    if (this.input == '') return;
     this.emitEvent.next(this.input);
   }
-  onAddSecond(){
-    if(this.input == '') return;
+  onAddSecond() {
+    if (this.input == '') return;
     this.emitEvent.next(this.input);
   }
 }

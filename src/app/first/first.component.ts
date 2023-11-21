@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './first.component.html',
-  styleUrl: './first.component.css'
+  styleUrl: './first.component.css',
 })
 export class FirstComponent {
   @Input() first = '';

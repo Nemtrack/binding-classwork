@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './second.component.html',
-  styleUrl: './second.component.css'
+  styleUrl: './second.component.css',
 })
 export class SecondComponent {
   @Input() second = '';
