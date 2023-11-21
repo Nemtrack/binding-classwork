@@ -35,9 +35,9 @@ export class AppComponent {
   //   this.input = '';
   // }
 
-  afterEventCatched(event: { contains: string; element: string; }): void | number | string {
-    if (event.contains == '') return;
-    if (event.element === 'first') return this.firsts.push(event.contains);
-    return this.seconds.push(event.contains);
+  afterEventCatched(event: { contains: string; element: string }): void {
+    if (event.contains === '') return;
+    if (event.element === 'first') this.firsts.push(event.contains);
+    else this.seconds.push(event.contains);
   }
 }
