@@ -25,17 +25,19 @@ export class AppComponent {
   seconds: string[] = [];
   input: string = '';
 
-  onAddFirst() {
-    this.firsts.push(this.input);
-    this.input = '';
-  }
+  // onAddFirst() {
+  //   this.firsts.push(this.input);
+  //   this.input = '';
+  // }
 
-  onAddSecond() {
-    this.seconds.push(this.input);
-    this.input = '';
-  }
+  // onAddSecond() {
+  //   this.seconds.push(this.input);
+  //   this.input = '';
+  // }
 
-  onEventCatched(event: any) {
-    console.log(event);
+  onEventCatched(event: { contains: string; element: string }) {
+    if (event.contains == '') return;
+    if (event.element === 'first') return this.firsts.push(event.contains);
+    return this.seconds.push(event.contains);
   }
 }
