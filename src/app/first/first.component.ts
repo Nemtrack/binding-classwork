@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
     `
       p {
         color: red;
+        font-weight: bold;
       }
     `,
   ],
