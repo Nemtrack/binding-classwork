@@ -9,15 +9,18 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './select.component.html',
 })
 export class SelectComponent {
-  @Output() emitEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Output() emitEvent: EventEmitter<{ contains: string; element: string }> =
+    new EventEmitter<{ contains: string; element: string }>();
   input: string = '';
 
   onAddFirst() {
     if (this.input == '') return;
-    this.emitEvent.next(this.input);
+    this.emitEvent.next({ contains: this.input, element: 'first' });
+    this.input = '';
   }
   onAddSecond() {
     if (this.input == '') return;
-    this.emitEvent.next(this.input);
+    this.emitEvent.next({ contains: this.input, element: 'second' });
+    this.input = '';
   }
 }
