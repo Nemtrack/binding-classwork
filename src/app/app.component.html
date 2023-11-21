@@ -1,5 +1,5 @@
 <div class="container" style="text-align: center">
-  <app-select (emitEvent)="onEventCatched($event)"></app-select>
+  <app-select (emitElement)="afterEventCatched($event)"></app-select>
   <div class="row">
     @for(first of firsts; track $index){
     <app-first [first]="first"></app-first>

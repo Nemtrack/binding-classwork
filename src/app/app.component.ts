@@ -35,7 +35,7 @@ export class AppComponent {
   //   this.input = '';
   // }
 
-  onEventCatched(event: { contains: string; element: string }) {
+  afterEventCatched(event: { contains: string; element: string }) {
     if (event.contains == '') return;
     if (event.element === 'first') return this.firsts.push(event.contains);
     return this.seconds.push(event.contains);
